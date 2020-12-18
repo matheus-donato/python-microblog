@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+    font-family: Lato, sans-serif;
+}
+
+*, *::after, *::before {    
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar {
+    max-width: 640px; /* fixando largura máxima do cabeçalho */
+    margin: 50px auto; /* 50 pixels de margem em cima e em baixo e imagem centralizada */
+    padding: 0 20px; /* padding superior e inferior colado na margem e 20 pixels nas laterais */
+    display: flex; /* modo de disposição dos elementos */
+    flex-direction: row; /* colocando os elemntos dessa classe na horizontal. Vercial é o default */
+    justify-content: space-between; /* afastando os elementos o máximo possível */
+    font-size: 24px; /* aumentando fonte do texto */
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center; /* alinha os elementos do container de forma cetnralizada */
+}
+
+.navbar__logo {
+    margin-right: 30px;
+}
+
+.navbar__navigation {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style: none; /* remove os bullet points da lista */
+    color: #5c6b70; 
+}
+
+.navbar__navigation-item {
+    margin-left: 50px;
+}
+
+.navbar__link {
+    text-decoration: none; /* remove o sublinhado do link */
+    color: inherit; /* herda a cor que essa classe está contida */
+}
+
+.main {
+    max-width: 450px;
+    margin: 0 auto;    
+    padding: 0 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* alinha elementos no final do container flex */
+}
+
+.form__input {
+    width: 100%; /* força o elemento dessa classe a ocupar 100% da largura disponível */
+}
+
+.form__label {
+    display: block; /* tranforma o elemnto em um bloco, ou seja, ele ocupa toda a largura da linha e força outros elementos irem para baixo dele */
+    margin-bottom: 10px;
+}
+
+.form__textarea {
+    width: inherit;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #f3f6f6;
+    margin-bottom: 10px;
+}
+
+.form__submit {
+    background-color: #3cd0ff;
+    border: none;
+    font-size: bold;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.form__submit:hover {
+    background-color: #18c1e1;
+}
+
+.entry {
+    margin-top: 50px;
+}
+
+.entry__title {
+    display: inline;
+    font-size: 18px;
+}
+
+.entry__date {
+    color: #5c6b70;
+}
+
+.entry__content {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.footer {
+    background-color: #323f43;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 4px solid black;
+    color: white;
+    font-size: 12px;
+}
+
+.footer__content {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .left {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.footer_item {
+    margin-bottom: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__item:hover {
+    text-decoration: underline;
+}
