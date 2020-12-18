@@ -1,8 +1,8 @@
 import datetime
-import locale
+#import locale
 from flask import Flask, render_template, request
 from pymongo import MongoClient
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+#locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 def create_app():
     '''
@@ -15,7 +15,6 @@ def create_app():
 
     @app.route("/", methods=["GET", "POST"])
     def home():
-
         if request.method == "POST":
             entry_content = request.form.get("content")
             formatted_date = datetime.datetime.today().strftime("%d-%m-%Y")
@@ -29,4 +28,4 @@ def create_app():
             for entry in app.db.entries.find({})
         ]
         return render_template("home.html", entries=entries_with_date)
-    return app.run(port=5000)
+    return app
