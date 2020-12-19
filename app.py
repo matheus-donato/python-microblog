@@ -10,7 +10,7 @@ def create_app():
     pelo Flask quando ele for executada, e com isso garantimos que ela só será chamada apenas uma vez.
     '''
     app = Flask(__name__)
-    client = MongoClient("mongodb+srv://matheus:master57@microblog-application.xztf5.mongodb.net/test")
+    client = MongoClient("mongodb+srv://matheus:master57@microblog-application.xztf5.mongodb.net/microblog")
     app.db = client.microblog
 
     @app.route("/", methods=["GET", "POST"])
