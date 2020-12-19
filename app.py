@@ -1,7 +1,11 @@
+import os
 import datetime
 import locale
 from flask import Flask, render_template, request
 from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
 locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 def create_app():
@@ -10,7 +14,7 @@ def create_app():
     pelo Flask quando ele for executada, e com isso garantimos que ela só será chamada apenas uma vez.
     '''
     app = Flask(__name__)
-    client = MongoClient("mongodb+srv://matheus:master57@microblog-application.xztf5.mongodb.net/microblog")
+    client = MongoClient(os.environ.get("MONGODB_URI"))
     app.db = client.microblog
 
     @app.route("/", methods=["GET", "POST"])
