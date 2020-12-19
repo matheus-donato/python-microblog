@@ -1,8 +1,8 @@
 import datetime
-#import locale
+import locale
 from flask import Flask, render_template, request
 from pymongo import MongoClient
-#locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 def create_app():
     '''
